@@ -1,0 +1,42 @@
+# Silicon structure optimization (atomic positions)
+
+#Optimization parameters
+ionmov 2              # BFGS ionic relaxation
+ntime 50              # Maximum number of optimization steps
+tolmxf 5.0d-6         # Tolerance on max force (Hartree/Bohr)
+
+#Definition of the unit cell
+acell 3*10.26         # Lattice constant in Bohr
+rprim 0.0 0.5 0.5     # FCC primitive vectors
+      0.5 0.0 0.5
+      0.5 0.5 0.0
+
+#Definition of the atom types and atoms
+ntypat 1
+znucl 14
+natom 2
+typat 1 1
+xred                  # Slightly displaced from equilibrium
+   0.0  0.0  0.0
+   0.26 0.26 0.26
+
+#Plane wave basis
+ecut 30.0
+
+#K-point grid
+ngkpt 8 8 8
+nshiftk 1
+shiftk 0.0 0.0 0.0
+
+#SCF parameters
+nstep 50
+toldfe 1.0d-10
+diemac 12.0
+
+#Output
+prtwf 1
+prtden 1
+
+#Pseudopotential
+pp_dirpath "$ABINIT_PP_PATH"
+pseudos "Si.psp8"

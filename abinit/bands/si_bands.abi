@@ -1,0 +1,51 @@
+# Silicon band structure calculation using multi-dataset approach
+
+ndtset 2              # Two datasets
+
+#DATASET 1: Self-consistent calculation
+toldfe1 1.0d-10       # Energy tolerance for dataset 1
+prtden1 1             # Print density for dataset 2
+prtwf1 1              # Print wavefunctions
+
+#K-points for SCF (uniform grid)
+kptopt1 1             # Automatic k-point generation
+ngkpt1 8 8 8          # Monkhorst-Pack grid
+nshiftk1 1
+shiftk1 0.0 0.0 0.0
+
+#DATASET 2: Band structure calculation
+iscf2 -2              # Non-self-consistent calculation
+getden2 1             # Get density from dataset 1
+tolwfr2 1.0d-12       # Wavefunction tolerance
+nband2 8              # Number of bands to compute
+
+#K-points for band structure (automatic FCC path)
+kptopt2 -6            # Band structure mode (FCC)
+ndivsm2 10            # Number of divisions for smallest segment
+
+#Common parameters for all datasets
+#Unit cell definition
+acell 3*10.26
+rprim 0.0 0.5 0.5
+      0.5 0.0 0.5
+      0.5 0.5 0.0
+
+#Atomic species and positions
+ntypat 1
+znucl 14
+natom 2
+typat 1 1
+xred
+   0.0  0.0  0.0
+   0.25 0.25 0.25
+
+#Plane wave basis
+ecut 30.0
+
+#SCF parameters
+nstep 50
+diemac 12.0
+
+#Pseudopotential
+pp_dirpath "$ABINIT_PP_PATH"
+pseudos "Si.psp8"

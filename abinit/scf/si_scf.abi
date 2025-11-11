@@ -1,0 +1,39 @@
+# Silicon SCF calculation
+# Ground state calculation using ABINIT
+
+#Definition of the unit cell
+acell 3*10.26         # Lattice constant in Bohr
+rprim 0.0 0.5 0.5     # FCC primitive vectors
+      0.5 0.0 0.5
+      0.5 0.5 0.0
+
+#Definition of the atom types and atoms
+ntypat 1              # Number of types of atoms
+znucl 14              # Atomic number of species
+natom 2               # Number of atoms
+typat 1 1             # Type of each atom
+xred                  # Reduced coordinates
+   0.0  0.0  0.0
+   0.25 0.25 0.25
+
+#Definition of the plane wave basis set
+ecut 30.0             # Plane wave cutoff energy in Hartree
+
+#Definition of the k-point grid
+ngkpt 8 8 8           # Grid of k-points
+nshiftk 1             # Number of shifts
+shiftk 0.0 0.0 0.0    # Shift vector
+
+#Definition of the SCF procedure
+nstep 50              # Maximum number of SCF iterations
+toldfe 1.0d-10        # Tolerance on total energy (Hartree)
+diemac 12.0           # Dielectric constant for preconditioning
+
+#Dataset and printing options
+prtwf 1               # Print wavefunctions
+prtden 1              # Print density
+prteig 1              # Print eigenvalues
+
+#Pseudopotential
+pp_dirpath "$ABINIT_PP_PATH"
+pseudos "Si.psp8"
