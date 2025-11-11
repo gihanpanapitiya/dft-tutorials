@@ -5,11 +5,12 @@ dft/
 │
 ├── README.md                          # Main repository overview
 │
-├── docs/                              # General DFT resources
-│   ├── common-concepts.md            # DFT fundamentals for all codes
-│   ├── pseudopotentials.md           # Pseudopotential guide
-│   ├── convergence.md                # Convergence testing guide
-│   └── visualization.md              # Visualization tools and techniques
+├── docs/                           # General resources
+│   ├── theory.md                  # **NEW!** Theoretical foundations: Kohn-Sham orbitals, pseudopotentials, DFT formalism
+│   ├── common-concepts.md         # DFT basics, XC functionals, k-points
+│   ├── pseudopotentials.md        # Pseudopotential guide
+│   ├── convergence.md             # Convergence testing methodology
+│   └── visualization.md           # Visualization tools
 │
 ├── quantum-espresso/                  # Quantum ESPRESSO tutorials
 │   ├── README.md                     # QE overview and setup
@@ -66,8 +67,13 @@ dft/
 
 ## Quick Navigation Guide
 
-### I want to learn DFT basics
-→ Start with [`docs/common-concepts.md`](docs/common-concepts.md)
+## 🔍 Quick Navigation
+
+### "I want to understand the theory behind DFT..."
+→ Start here: **[docs/theory.md](docs/theory.md)** - Learn about Kohn-Sham orbitals, pseudopotentials, many-body problem, exchange-correlation functionals
+
+### "I want to learn DFT basics..."
+→ Start here: **[docs/common-concepts.md](docs/common-concepts.md)**
 
 ### I want to understand pseudopotentials
 → Read [`docs/pseudopotentials.md`](docs/pseudopotentials.md)
@@ -97,11 +103,12 @@ dft/
 ## Learning Path
 
 ### Beginner
-1. Read `docs/common-concepts.md`
-2. Choose a code (Quantum ESPRESSO recommended for beginners)
-3. Follow the SCF tutorial for your chosen code
-4. Run the provided examples
-5. Understand the output
+1. Read `docs/theory.md` to understand the fundamentals
+2. Read `docs/common-concepts.md` for practical DFT concepts
+3. Choose a code (Quantum ESPRESSO recommended for beginners)
+4. Follow the SCF tutorial for your chosen code
+5. Run the provided examples
+6. Understand the output
 
 ### Intermediate
 1. Learn about pseudopotentials (`docs/pseudopotentials.md`)

@@ -38,6 +38,7 @@ Each tutorial includes:
 
 ## 🔗 General Resources
 
+- [**Theoretical Foundations**](./docs/theory.md) - **NEW!** Kohn-Sham orbitals, pseudopotential theory, many-body problem, DFT formalism
 - [Common Concepts](./docs/common-concepts.md) - DFT basics applicable to all codes
 - [Pseudopotentials](./docs/pseudopotentials.md) - Guide to pseudopotential selection
 - [Convergence Testing](./docs/convergence.md) - k-point and cutoff convergence
