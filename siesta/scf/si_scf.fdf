@@ -1,0 +1,52 @@
+SystemName          Silicon bulk crystal
+SystemLabel         si_scf
+
+NumberOfAtoms       2
+NumberOfSpecies     1
+
+%block ChemicalSpeciesLabel
+  1  14  Si
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant     5.43 Ang
+
+%block LatticeVectors
+  0.000  0.500  0.500
+  0.500  0.000  0.500
+  0.500  0.500  0.000
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat  Fractional
+
+%block AtomicCoordinatesAndAtomicSpecies
+  0.00  0.00  0.00  1  Si
+  0.25  0.25  0.25  1  Si
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+PAO.BasisType       split
+PAO.BasisSize       DZP
+PAO.EnergyShift     0.01 Ry
+
+MeshCutoff          300.0 Ry
+
+XC.functional       GGA
+XC.authors          PBE
+
+%block kgrid_Monkhorst_Pack
+  8  0  0  0.0
+  0  8  0  0.0
+  0  0  8  0.0
+%endblock kgrid_Monkhorst_Pack
+
+MaxSCFIterations    50
+DM.MixingWeight     0.25
+DM.Tolerance        1.0d-4
+DM.NumberPulay      5
+
+SolutionMethod      diagon
+
+WriteDM             .true.
+WriteCoorStep       .true.
+WriteForces         .true.
+WriteKpoints        .true.
+WriteEigenvalues    .true.
