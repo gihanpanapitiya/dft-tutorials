@@ -2,16 +2,15 @@
 
 For a system of nuclei and electrons, the exact non-relativistic Hamiltonian is
 
-$$
-\left[
-\hat H =
+\[
+\hat{H} =
 -\sum_i \frac{\hbar^2}{2m_e}\nabla_i^2
 -\sum_I \frac{\hbar^2}{2M_I}\nabla_I^2
 -\sum_{i,I} \frac{Z_I e^2}{\lvert \mathbf r_i - \mathbf R_I \rvert}
 +\sum_{i<j} \frac{e^2}{\lvert \mathbf r_i - \mathbf r_j \rvert}
 +\sum_{I<J} \frac{Z_I Z_J e^2}{\lvert \mathbf R_I - \mathbf R_J \rvert}
-\right]
-$$
+\]
+
 This problem is impossible to solve exactly for real materials.
 
 ---
