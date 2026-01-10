@@ -1,7 +1,3 @@
-Sure. **ABINIT** is an *ab initio* electronic-structure code, and its theory is rooted mainly in **Density Functional Theory (DFT)** and related many-body extensions. I’ll explain the theory step-by-step, from fundamentals to what ABINIT actually solves in practice.
-
----
-
 ## 1. Many-electron problem (starting point)
 
 For a system of nuclei and electrons, the exact non-relativistic Hamiltonian is
@@ -201,26 +197,10 @@ ABINIT includes advanced many-body and response theories:
 
 **ABINIT implements Kohn–Sham DFT using plane-wave basis sets and pseudopotentials, solving the electronic ground state self-consistently under periodic boundary conditions, with extensions to phonons, excited states, and many-body perturbation theory.**
 
----
-
-If you want, I can:
-
-* Explain **DFPT or GW in ABINIT**
-* Connect theory to **input variables**
-* Compare ABINIT with **VASP / Quantum ESPRESSO**
-* Go through **one equation → one input keyword mapping**
-
-Just tell me your level (student / PhD / postdoc) and goal 🙂
 
 
 
 
----
-
-
-This is an **excellent and very fundamental question**—once this clicks, *plane-wave DFT* really makes sense.
-
-I’ll answer it in layers, from **physics → mathematics → numerical reasons**, and I’ll explicitly connect it to **periodic solids and ABINIT**.
 
 ---
 
